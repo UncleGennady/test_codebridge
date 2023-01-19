@@ -1,16 +1,21 @@
 import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/dist/query/react";
 
-export const weatherApi = createApi({
+export const postApi = createApi({
     reducerPath:"postApi",
-    baseQuery:fetchBaseQuery({baseUrl:'http://api.openweathermap.org/'}),
+    baseQuery:fetchBaseQuery({baseUrl:'https://api.spaceflightnewsapi.net/'}),
     endpoints: (builder) => ({
-        // getCity: builder.query({
-        //     query: (city) =>({
-        //         url: `geo/1.0/direct?q=${city}&limit=5&appid=bbbf44714a7a1dc9ab1b9a0db75f9682`
-        //     })
-        // }),
+        getPost: builder.query({
+            query: () =>({
+                url: `v3/articles`
+            })
+        }),
+        getPostById: builder.query({
+            query: (id) =>({
+                url: `v3/articles/${id}`
+            })
+        }),
     }),
 
 })
 
-export const{ } = weatherApi;
+export const{useGetPostQuery, useGetPostByIdQuery  } = postApi;
