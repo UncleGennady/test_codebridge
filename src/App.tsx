@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import{Routes, Route} from "react-router-dom"
 import {Container} from "@mui/material";
 import Post from "./routes/post";
@@ -16,6 +16,7 @@ function App() {
                 <Route path="/*" element={<div> Oops... page not found</div>} />
             </Routes>
         </Container>
+
     </div>
   );
 }

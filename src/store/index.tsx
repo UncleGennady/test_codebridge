@@ -4,7 +4,6 @@ import {postApi} from './postApi'
 
 export const store = configureStore({
     reducer: {
-
         [postApi.reducerPath]: postApi.reducer,
     },
 

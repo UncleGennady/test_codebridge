@@ -1,0 +1,25 @@
+.post-card{
+    &__wrapper-image{
+      height: 203px;
+      overflow: hidden;
+      img{
+        width: 100%;
+      }
+    }
+  &__date{
+    margin: 0;
+    padding-left:26px;
+    position: relative;
+
+    &::before{
+      content: "";
+      position: absolute;
+      background-image: url("./../../../public/icons/calendar.svg");
+      width: 16px;
+      height: 16px;
+      top:2px;
+      left: 0;
+    }
+  }
+}
+

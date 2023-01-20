@@ -1,15 +1,16 @@
 import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/dist/query/react";
+import {IPost} from './../modal'
 
 export const postApi = createApi({
     reducerPath:"postApi",
     baseQuery:fetchBaseQuery({baseUrl:'https://api.spaceflightnewsapi.net/'}),
     endpoints: (builder) => ({
-        getPost: builder.query({
+        getPost: builder.query<IPost[], void>({
             query: () =>({
                 url: `v3/articles`
             })
         }),
-        getPostById: builder.query({
+        getPostById: builder.query<IPost, number | string>({
             query: (id) =>({
                 url: `v3/articles/${id}`
             })
