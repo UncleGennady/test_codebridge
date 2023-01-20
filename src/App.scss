@@ -1,12 +1,8 @@
 .link {
-  font-weight: 700;
-  text-decoration: none;
-  color: black;
-  padding-right:18px;
-  position: relative;
 
 
-  &::after{
+
+  &-after::after{
     content: "";
     position: absolute;
     background-image: url("./../public/icons/arrow.svg");
@@ -14,6 +10,16 @@
     height: 10px;
     top:5px;
     right: 0;
+  }
+  &-before::before{
+    content: "";
+    position: absolute;
+    background-image: url("./../public/icons/arrow.svg");
+    transform: rotateY(180deg);
+    width: 12px;
+    height: 10px;
+    top:5px;
+    left: 0;
   }
 }
 

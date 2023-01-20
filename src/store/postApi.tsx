@@ -10,7 +10,7 @@ export const postApi = createApi({
                 url: `v3/articles`
             })
         }),
-        getPostById: builder.query<IPost, number | string>({
+        getPostById: builder.query({
             query: (id) =>({
                 url: `v3/articles/${id}`
             })
