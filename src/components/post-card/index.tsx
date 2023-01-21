@@ -13,7 +13,7 @@ export default function PostCard(props:IPostCard) {
     const daysAgo = getDate(props.publishedAt)
     console.log(daysAgo)
     return (
-        <Card className="post-card" sx={{ maxWidth: 365, boxShadow:'0px 8px 24px 0px rgb(0 0 0 / 5%), 0px 0px 1px 1px rgb(0 0 0 / 5%)' }}>
+        <Card className="post-card" sx={{ maxWidth: 365, boxShadow:'0px 8px 24px 0px rgb(0 0 0 / 5%), 0px 0px 1px 1px rgb(0 0 0 / 5%)', display:"flex", flexDirection: "column", justifyContent: "space-between"}}>
             <div className="post-card__wrapper-image">
                 <img src={props.imageUrl} alt="#"/>
             </div>
@@ -30,7 +30,7 @@ export default function PostCard(props:IPostCard) {
                 </Typography>
             </CardContent>
             <CardActions sx={{p:0, px:3, pb:3}}>
-               <Link className="link link-after" to={`/post/${props.id}`}>Read more</Link>
+               <Link className="post-card__link link-after" to={`/post/${props.id}`}>Read more</Link>
             </CardActions>
         </Card>
     );

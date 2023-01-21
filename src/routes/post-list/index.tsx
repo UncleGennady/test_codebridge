@@ -4,6 +4,8 @@ import './style.scss';
 import PostCard from "../../components/post-card";
 import {useGetPostQuery} from "../../store/postApi";
 import {IPost} from "../../modal";
+import Container from '@mui/material/Container';
+
 
 const PostList = () => {
 
@@ -16,16 +18,17 @@ const PostList = () => {
         )
     }
     return (
-        <div>
-            <p>Filter by keywords</p>
-            <p>The most successful IT companies in 2020</p>
-            <SearchField/>
-            <hr/>
-            <div className="post-list__cards">
-                {!!isLoading ? "Loading..." : !! data && renderCards(data)}
+        <Container>
+            <div>
+                <p>Filter by keywords</p>
+                <p>The most successful IT companies in 2020</p>
+                <SearchField/>
+                <hr/>
+                <div className="post-list__cards">
+                    {!!isLoading ? "Loading..." : !! data && renderCards(data)}
+                </div>
             </div>
-        </div>
-
+        </Container>
     );
 };
 
