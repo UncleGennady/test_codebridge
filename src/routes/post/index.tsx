@@ -46,7 +46,6 @@ const Post = () => {
         <ThemeProvider theme={theme}>
             <Container disableGutters={true} maxWidth={false} >
                 <div className="post__content">
-                    {/*<img src={data.imageUrl} alt=""/>*/}
                     <h2>{data.title}</h2>
                     <p>{data.summary}
                         {loremString}

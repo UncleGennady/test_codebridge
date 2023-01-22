@@ -11,7 +11,6 @@ import "./style.scss"
 export default function PostCard(props:IPostCard) {
 
     const daysAgo = getDate(props.publishedAt)
-    console.log(daysAgo)
     return (
         <Card className="post-card" sx={{ maxWidth: 365, boxShadow:'0px 8px 24px 0px rgb(0 0 0 / 5%), 0px 0px 1px 1px rgb(0 0 0 / 5%)', display:"flex", flexDirection: "column", justifyContent: "space-between"}}>
             <div className="post-card__wrapper-image">
@@ -21,12 +20,12 @@ export default function PostCard(props:IPostCard) {
                 <Typography sx={{ fontSize: 14, m:0, pb:3, color:"#868181"}} color="text.secondary" gutterBottom >
                     <p className='post-card__date'>{daysAgo}</p>
                 </Typography>
-                <Typography sx={{ fontSize: 24,pb:3 }} variant="h3" component="div">
-                    {props.title}
+                <Typography sx={{ fontSize: 24,pb:3 }} variant="h3" component="div" dangerouslySetInnerHTML={{__html:props.title }}>
+
                 </Typography>
 
-                <Typography sx={{ fontSize: 16}} variant="body2">
-                    {cuttingString(props.summary)}
+                <Typography sx={{ fontSize: 16}} variant="body2" dangerouslySetInnerHTML={{__html:cuttingString(props.summary) }}>
+
                 </Typography>
             </CardContent>
             <CardActions sx={{p:0, px:3, pb:3}}>

@@ -1,0 +1,32 @@
+.post__content {
+  position: relative;
+  background: white;
+  margin: 0 75px 35px;
+  padding: 35px 75px 50px;
+  border: 1px solid #EAEAEA;
+  border-radius: 5px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.05);
+  color: #363636;
+}
+.post__content h2 {
+  margin: 0;
+  padding: 35px 0 50px 0;
+  text-align: center;
+  font-weight: 400;
+  line-height: 29px;
+}
+.post__content p {
+  margin: 0;
+  line-height: 27px;
+  font-size: 18px;
+}
+.post__link {
+  font-weight: 700;
+  text-decoration: none;
+  color: black;
+  padding-left: 18px;
+  position: relative;
+  margin-left: 150px;
+}
+
+/*# sourceMappingURL=style.css.map */

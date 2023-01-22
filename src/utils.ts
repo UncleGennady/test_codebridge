@@ -33,7 +33,7 @@ const getDateClosing = () => {
             dayOfMounth = day+"th"
         }
         const year = date.getFullYear()
-        console.log(dayOfMounth)
+
        return (`${mounth} ${dayOfMounth}, ${year}`)
     }
 }

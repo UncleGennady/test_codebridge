@@ -1,7 +1,11 @@
-.post-list__cards{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap:28px
+.post-list{
+  &__cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap:28px
+  }
+  &__search{
+    font-weight: 600;
+  }
 
 }

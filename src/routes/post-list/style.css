@@ -1,8 +1,10 @@
 .post-list__cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   gap: 28px;
+}
+.post-list__search {
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=style.css.map */
