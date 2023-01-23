@@ -1,11 +1,27 @@
 .post-list{
   &__cards{
+
     display: flex;
     flex-wrap: wrap;
     gap:28px
   }
   &__search{
+    padding-bottom:45px;
     font-weight: 600;
   }
 
+  &__result-line{
+    margin: 0;
+    padding: 40px 0 5px 0;
+    border-bottom:1px solid #EAEAEA;
+  }
+
+}
+
+@media(max-width: 1199px){
+  .post-list{
+    &__cards{
+      justify-content: space-around;
+    }
+  }
 }

@@ -29,4 +29,29 @@
   margin-left: 150px;
 }
 
+@media (max-width: 790px) {
+  .post__content {
+    margin: 0 35px 35px;
+    padding: 25px 35px 30px;
+  }
+  .post__content h2 {
+    font-size: 22px;
+  }
+  .post__content p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 400px) {
+  .post__content {
+    margin: 0 25px 25px;
+    padding: 15px 25px 20px;
+  }
+  .post__content h2 {
+    font-size: 20px;
+  }
+  .post__content p {
+    font-size: 14px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

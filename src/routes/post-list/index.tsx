@@ -19,7 +19,7 @@ const PostList = () => {
     useEffect(()=>{
         !!data && dispatch(addPosts(data))
         !!searchString && dispatch(filterPosts(searchString))
-    },[data, searchString])
+    },[searchString])
 
     const posts = useSelector((state:RootState)=>state.postList.posts)
 
@@ -39,9 +39,8 @@ const PostList = () => {
                 <div className="post-list__search">
                     <p>Filter by keywords</p>
                     {!! data && <SearchField data={data} changeHandler={changeHandler}/>}
-                    <p>results: {!!searchString ? posts.length: !!data && data.length}</p>
+                    <p className="post-list__result-line">results: {!!searchString ? posts.length: !!data && data.length}</p>
                 </div>
-                <hr/>
                 <div className="post-list__cards">
                     {!!searchString ? renderCards(posts) : !!isLoading ? "Loading..." : !! data && renderCards(data)}
                 </div>

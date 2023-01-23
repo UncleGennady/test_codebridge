@@ -4,7 +4,19 @@
   gap: 28px;
 }
 .post-list__search {
+  padding-bottom: 45px;
   font-weight: 600;
+}
+.post-list__result-line {
+  margin: 0;
+  padding: 40px 0 5px 0;
+  border-bottom: 1px solid #EAEAEA;
+}
+
+@media (max-width: 1199px) {
+  .post-list__cards {
+    justify-content: space-around;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
