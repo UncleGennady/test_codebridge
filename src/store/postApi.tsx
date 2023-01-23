@@ -3,7 +3,7 @@ import {IPost} from './../modal'
 
 export const postApi = createApi({
     reducerPath:"postApi",
-    baseQuery:fetchBaseQuery({baseUrl:'https://api.spaceflightnewsapi.net/'}),
+    baseQuery:fetchBaseQuery({baseUrl:process.env.REACT_APP_API_URL}),
     endpoints: (builder) => ({
         getPost: builder.query<IPost[], void>({
             query: () =>({
